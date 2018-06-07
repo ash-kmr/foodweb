@@ -1,0 +1,17 @@
+net: "/home/fxhe/sharedLocal/FoodProject_Indian10/singletask/Indian12_VGG16/network/train_val.prototxt"
+test_iter: 100#1326
+test_interval:1000
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.001
+momentum: 0.9
+weight_decay: 0.00001		# 0.004
+# The learning rate policy
+lr_policy: "step"
+gamma: 0.1
+stepsize: 8000
+
+display: 100
+max_iter: 64000
+snapshot: 1000
+snapshot_prefix: "/home/fxhe/sharedLocal/FoodProject_Indian10/singletask/Indian12_VGG16/model/"
+solver_mode: GPU

@@ -1,0 +1,148 @@
+#particles-js{
+	width: 100%;
+	height: 100vh;
+	z-index: 2;
+	background: black;
+	opacity: 0.7;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: fixed;
+}
+ul{
+	list-style-type: none;
+}
+.dz-message{
+	font-size: 2em;
+	color: #d7dbdd ;
+}
+ .loader {
+ 	position: absolute;
+    border: 10px solid #f3f3f3; /* Light grey */
+    margin-top: 37%;
+    margin-left: 40%;
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.foodlist{
+	z-index: 10;
+	font-size: 1.7em;
+}
+#star{
+	padding-top: 6%;
+	z-index: 10;
+}
+.dropzone{
+	position: relative;
+	background: transparent;
+	border: dashed white;
+	border-radius: 20px;
+	z-index: 10;
+	width: 70%;
+	height: 30vh;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+input[type='file']{
+	color:#fff;
+	z-index: 10;
+	background: #428bca;
+	border: 1px solid #2b669a;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0, 1px, 1px, rgba(0, 0, 0, .075);
+	padding: .8em 1.1em;
+	font-size: 1.3em;
+	border-radius: 6px;
+	cursor: pointer;
+}
+/* modal css */
+.modal-dialog {
+  width: 95%;
+  left: 2.5%;
+  z-index: 10;
+  height: 95%;
+  top: 2.5%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  z-index: 10;
+  border-radius: 0;
+}
+#blackback{
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	opacity: 1;
+	background-image: url('../food.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: fixed;
+}
+/* navbar */
+.navbar {
+	background-color:transparent !important;
+	font-size: 1.3em;
+	position: fixed;
+	z-index: 10;
+	border-color:transparent;
+	background-image:none;
+	box-shadow:none;	
+}
+
+.navbaritem:hover{
+	color: white;
+	z-index: 10;
+}
+.navbaritem{
+	z-index: 10;
+	font-family: serif;
+	transition: color 0.5s ease;
+}
+
+.labellogo{
+	width: 100%;
+	z-index: 10;
+	background: blue;
+	position: relative;
+	text-align: center;
+}
+.about{
+	width: 100%;
+	z-index: 10;
+	position: relative;
+}
+#logo{
+	margin-top: 10%;
+	z-index: 10;
+	font-size: 6em;
+	position: absolute;
+	text-align: center;
+}
+#label{
+	margin-top: 10%;
+	font-size: 3em;
+	position: absolute;
+	z-index: 10;
+	text-align: center;
+}
+#about{
+	color: white;
+	z-index: 10;
+	font-size: 6em;	
+}
+#aboutus{
+	z-index: 10;
+	color: white;
+}

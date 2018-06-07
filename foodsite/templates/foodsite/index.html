@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title{{source}}></title>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src = "{% static 'foodsite/js/particles.min.js' %}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="{% static 'foodsite/css/dropzone.css' %}" type="text/css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'foodsite/css/style.css' %}">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="http://malsup.github.com/jquery.form.js"></script> 
+</head>
+<body>
+	<style type="text/css">
+		label{
+		    padding-top: 6%;
+		    background: #0432B5; 
+		    display: table;
+		    text-align: center;
+		    color: #fff;
+		    cursor: pointer;
+		    width: 100%;
+		    height: 100%;
+		}
+
+		input[type="file"] {
+		    display: none;
+		    cursor: pointer;
+		}
+		#modalsubmit{
+			width: 100%;
+			height: 50px;
+		}
+	}
+	</style>
+
+	<script type="text/javascript">
+		function changer(input){
+			var name = input.files[0].name;
+			//document.getElementById('modallabel').childNodes[0].nodeValue = name;
+			document.getElementById('modalfilename').innerHTML = name;
+			if (input.files && input.files[0]) {
+	            var reader = new FileReader();
+	            reader.onload = function (e) {
+	                $('#my_image')
+	                    .attr('src', e.target.result);
+	            };
+	            reader.readAsDataURL(input.files[0]);
+	        }
+		}
+		function sleep(delay) {
+		    var start = new Date().getTime();
+		    while (new Date().getTime() < start + delay);
+		}
+	</script>
+	
+	<script type="text/javascript">
+		var impath;
+		var find = '_';
+		var re = new RegExp(find, 'g');
+		function toTitleCase(str) {
+		    return str.replace(/\w\S*/g, function(txt){
+		        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+		    });
+		}
+	</script>
+	<script type="text/javascript">
+		function readURL(input) {
+	        if (input.files && input.files[0]) {
+	            var reader = new FileReader();
+	            reader.onload = function (e) {
+	                $('#my_image')
+	                    .attr('src', e.target.result);
+	            };
+	            reader.readAsDataURL(input.files[0]);
+	        }
+	    }
+	</script>
+
+	<!-- navigation bar -->
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand navbaritem" href="#">{{source}}</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#" class = "navbaritem">About Us</a></li>
+					<li><a href="#" class = "navbaritem">Contact</a></li>
+					<li><a href="#" class = "navbaritem">Demo</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- navigation bar end -->
+	<div id = 'blackback'></div>
+	<div id = "particles-js"></div>
+	<!--<div id = "blackback"></div>-->
+	<div class="labellogo" style="color: white">
+		<h1 id = "logo">PlateLog</h1>
+		<h1 id = "label">AI-based food recognition</h1>
+	</div>
+	<div class="container">
+		<div class="about" style="text-align: center">
+			<h1 id = "about">About us</h1>
+			<h1 id = "aboutus">PlateLog provides AI-enabled diet recognition, logging and management on the mobile platform</h1><br><br><br><br>
+		</div>
+	</div>
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+	    <!-- Modal content-->
+		    <div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class = "container-fluid">
+					<div id = "review" class = "col-sm-9">
+						{% load static %}
+						<img id = "my_image" src = "" width="100%" height="700vh">
+					</div>
+					<div class= "col-sm-3" style="padding-left: 1%; padding-right: 1%">
+						<div class="loader"></div>
+						<ul id = "star">
+							<hr>
+							
+						</ul>
+						<form id = "helpform" style="margin-top: 95%;text-align: center">
+							{% csrf_token %}
+							<textarea class="form-control" id="correctdish" rows="3" placeholder="Don't find the right dish? help us by letting us know the right dish name"></textarea><br>
+							<button type="submit" class= "btn btn-primary" id = "helpsubmit">SUBMIT</button>
+						</form>
+					</div>
+				</div>
+				<div class = "container-fluid" style="margin-top: 30px">
+					<form id = "modalform">
+						{% csrf_token %}
+						<div class="col-sm-2" style="text-align: center; height: 50px; background: #0432B5;margin-left: 0.9%; width: 15.8%;">
+							<label id = "modallabel">CHOOSE IMAGE
+								<input type="file" name="modalfile" id = "modalfile" class = "modalfile" onchange="changer(this)">
+							</label>
+						</div>
+						<div class = "col-sm-5" id = "modalfilename" style="background: #5277DE; margin-left: 0.85%; width: 41%; height: 50px; font-size: 1.3em; padding-top: 0.7%">NO IMAGE CHOSEN</div>
+						<div class="col-sm-2"><button type="submit" class= "btn btn-primary" id = "modalsubmit">GO</button></div>
+					</form>
+				</div>
+		    </div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on('submit', '#modalform', function(e){
+				e.preventDefault();
+				var property = document.getElementById('modalfile').files[0];
+				var image_name = property.name;
+				var form_data = new FormData();
+				$('.loader').show();
+				$('#star').empty();
+				var helpel = document.getElementById('helpform');
+				helpel.style.marginTop = '95%';
+				//$('#helpform').css('margin-top', 95);
+				form_data.append('file', property);
+				$.ajax({
+					url : 'modalsubmit/',
+					method : "POST",
+					data : form_data,
+					contentType:false,
+					cache: false,
+					processData: false,
+					success:function(response){
+						var loc = window.location.pathname;
+	                    //alert(loc);
+	                    //var path = "{\% static 'static/" + response.path + "' %}";
+	                    var path = '/static/foodsite/' + response.path;
+	                    var imname = response.path.split('/')[1];
+	                    impath = imname;
+	                    var json = response;
+	                    var i = 0;
+	                    $('.loader').hide();
+	                    $('#helpform').css('margin-top', 0);
+	                    for (var p in json){
+	                    	i = i + 1;
+	                    	if(json.hasOwnProperty(p)){
+	                    		if(i!=1){
+		                    		var toappend = '<li class = "foodlist"><b>' + toTitleCase(p.replace(re," ")) + '</b> <p style = "float:right">' + json[p].substring(2, 4) + '</p><div class="w3-light-grey w3-round w3-tiny"><div id="bar'+i+'" class="w3-container w3-blue w3-center w3-round" style="width:0%"></div></div></li><hr>';
+		                    		$('#star').append(toappend);
+		                    		var idd1 = 'bar'+i;
+		                    		var thresh1 = json[p].substring(0, 4)*100;
+		                    		move(idd1, thresh1);
+	                    		}
+	                    	}
+	                    }
+					},
+				})
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		//helpform
+		$(document).ready(function(){
+			$(document).on('submit', '#helpform', function(e){
+				console.log('waspressed');
+				e.preventDefault();
+				alert('iamhere');
+				$.ajax({
+					url:'helpform/',
+					method:'POST',
+					data:{
+						imagename:impath,
+						dishname:$('#correctdish').val(),
+					},
+					success:function(response){
+
+					}
+				});
+			});
+		});
+	</script>
+	<form class="dropzone" id = "my-dropzone" action="{% url 'home' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+    </form><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	{% load static %}
+	<script src="{% static 'foodsite/js/dropzone.js' %}"></script>
+	<!-- javascript for controlling dropzone -->
+	<script type="text/javascript">
+        Dropzone.options.myDropzone = {
+            //previewTemplate : '<div style="display:none"></div>',
+            dictDefaultMessage : 'Drag an image or click to test',
+            init : function() {
+            	this.on('thumbnail', function(file){
+            		var helpel = document.getElementById('helpform');
+            		helpel.style.marginTop = '95%';
+            		$('.loader').show();
+            		$("#my_image").attr("src", file.dataURL);
+                    $("#myModal").modal('show');
+                    $('#star').empty();
+            	});
+            	this.on('complete', function(file){
+            	});
+                this.on('success', function(file, response) {
+                    //var loc = window.location.pathname;
+                    //console.log(file);
+                    var imname = response.path.split('/')[1];
+                    impath = imname;
+                    var json = response;
+                    $('.loader').hide();
+                    var i = 0;
+                    $('#star').empty();
+                    $('#helpform').css('margin-top', 0);
+                    for (var p in json){
+	                    	i = i + 1;
+	                    	if(json.hasOwnProperty(p)){
+	                    		if(i!=1){
+		                    		var toappend = '<li class = "foodlist"><b>' + toTitleCase(p.replace(re," ")) + '</b> <p style = "float:right">' + json[p].substring(2, 4) + '</p><div class="w3-light-grey w3-round w3-tiny"><div id="bar'+i+'" class="w3-container w3-blue w3-center w3-round" style="width:0%"></div></div></li><hr>';
+		                    		console.log(toappend);
+		                    		$('#star').append(toappend);
+		                    		var idd1 = 'bar'+i;
+		                    		if(json[p].indexOf('e')>-1){
+		                    			move(idd1, 0);	
+		                    		}else{
+		                    			var thresh1 = json[p].substring(0, 4)*100;
+		                    			move(idd1, thresh1);	
+		                    		}
+		                    		
+	                    		}
+	                    	}
+	                    }
+                    //alert('end');
+                    this.removeAllFiles(true);
+                });
+            },
+        };
+    </script>
+    <script>
+		function move(idd, thres) {
+			var elem = document.getElementById(idd);
+			var width = 1;
+			var id = setInterval(frame, 10);
+			function frame() {
+				if (width >= thres) {
+				  clearInterval(id);
+				} else {
+				  width++; 
+				  elem.style.width = width + '%'; 
+				  
+				}
+			}
+		}
+	</script>
+	<script type="text/javascript" src="{% static 'foodsite/js/indexparticles.js' %}"></script>
+	<!-- modal to be called when image is uploaded -->
+	
+	<script type="text/javascript">
+		// function to set the correct orientation for logo and label
+	
+		function setorientation(){
+			// getting screen height and width
+			var height = $(window).height();
+			var width = $(window).width();
+			// getting logo height and width
+			var logowidth = $("#logo").width();
+			var logoheight = $("#logo").height();
+			// setting logo margins
+			$("#logo").css('margin-top', parseInt(height)/2.8);
+			$("#logo").css('margin-left', (parseInt(width)-parseInt(logowidth))/2);
+			// getting label width
+			var labelwidth = $("#label").width();
+			//setting label margins
+			$("#label").css('margin-top', parseInt(height/2.8 + logoheight));
+			$("#label").css('margin-left', (parseInt(width)-parseInt(labelwidth))/2);
+			// getting the width and height of about us
+			var aboutwidth = $('#about').width();
+			var aboutheight = $('#about').height();
+			// setting margins of about
+			$('#about').css('margin-top', parseInt(height + height/7));
+			// getting the width and height of dropzone
+			var aboutwidth = $('#my-dropzone').width();
+			var aboutheight = $('#my-dropzone').height();
+			// setting margins of dropzone
+			$('#my-dropzone').css('margin-top', parseInt(height/2.8 + height/15));
+		}
+		//var interval = self.setInterval(function(){loopforever()},3);
+		window.onload = setorientation;
+		window.onresize = setorientation;
+	
+	</script>
+	<script type="text/javascript">
+		$('#about').css('opacity', '0');
+		$('#aboutus').css('opacity', '0');
+		$('#my-dropzone').css('opacity', '0');
+	</script>
+	<script type="text/javascript">
+		// opacity control
+		$(document).ready(function(){
+		    $(window).scroll(function(){
+		    	$('#logo').css("opacity", 1.1 - 4*$(window).scrollTop()/$(window).height());
+		    	$('#label').css("opacity", 1.1 - 4*$(window).scrollTop()/$(window).height());
+		    	$("#about").css("opacity", -1.5 + 4*$(window).scrollTop()/$(window).height());
+		    	$("#aboutus").css("opacity", -1.5 + 4*$(window).scrollTop()/$(window).height());
+		    	$('#my-dropzone').css("opacity", -4.5 + 4*$(window).scrollTop()/$(window).height());
+		    	if(parseInt(window.getComputedStyle(document.getElementById("about")).getPropertyValue("opacity")) == 1){
+		    		$('#about').css("opacity", 4.25 - 4*$(window).scrollTop()/$(window).height());
+		    		$('#aboutus').css("opacity", 4.25 - 4*$(window).scrollTop()/$(window).height());
+		    	}
+		    	/*
+		        $("#logo").css("opacity", 1.3 - 0.5*$(window).scrollTop() / $('#logo').height());
+		        $("#label").css("opacity", 1.3 - 0.5*$(window).scrollTop() / $('#logo').height());
+		        $("#about").css("opacity", -1.6 + 0.45*$(window).scrollTop() / $('#about').height());
+		        $("#my-dropzone").css("opacity", -4.3 + 0.9*$(window).scrollTop() / $('#my-dropzone').height());
+		        $("#aboutus").css("opacity", -1.6 + 0.45*$(window).scrollTop() / $('#about').height());
+		        if( parseInt(window.getComputedStyle(document.getElementById("about")).getPropertyValue("opacity")) == 1){
+		        	//alert("imlovinit");
+		        	$("#about").css("opacity", 5.5 - 0.5*$(window).scrollTop()/$('#about').height());	
+		        	$("#aboutus").css("opacity", 5.5 - 0.5*$(window).scrollTop()/$('#about').height());	
+		        }
+		        */
+		    });
+		});
+	</script>
+	<script type="text/javascript">
+		var text = ["AI-based food recognition", "AI-based food logging", "AI-based food management"];
+		var counter = 0;
+		var elem = document.getElementById("label");
+		var inst = setInterval(change, 1000);
+
+		function change() {
+		  elem.innerHTML = text[counter];
+		  counter++;
+		  if (counter >= text.length) {
+		    counter = 0;
+		    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+		  }
+		}
+	</script>
+
+</body>
+</html>
