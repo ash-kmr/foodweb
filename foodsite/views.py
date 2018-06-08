@@ -8,12 +8,18 @@ from django import forms
 from .models import UploadFile
 from .forms import UploadFileForm
 import sys
+import json
 import csv
 sys.path.append('/home/ashish/Documents/github/foodweb/caffeclassifier/')
 from foodclassify import main
 # Create your views here.
 
 def home(request):
+    """
+    created for requests sent by dropzone. Takes a POST request
+    as input argument and returns a JsonResponse containing the
+    path to the image and the predictions.
+    """
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
@@ -36,6 +42,11 @@ def home(request):
 
 @csrf_exempt
 def modalsubmit(request):
+    """
+    created for requests sent by modalform. Takes a POST request
+    as input argument and returns a JsonResponse containing the
+    path to the image and the predictions.
+    """
     print('i just got called')
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
@@ -55,8 +66,37 @@ def modalsubmit(request):
     else:
         return JsonResponse({'foo':'foo'})
 
+def getinfo(request):
+    """
+    created for requests sent by android application for getting
+    the nutrition facts for a food item. Returns a json reponse
+    containing the url of the food image, the nutrition facts and
+    the version.
+    """
+    print('getinfo request')
+    if request.method == 'POST':
+        dishname = request.POST['dishname']
+        response = {}
+        response['image_url'] = 'http://' + request.get_host() + '/static/foodsite/images' + dishname.replace('_', '');
+        response['version'] = 1;
+        f = open('nutrition.json')
+        nutrition = json.load(f)
+        f.close()
+        jsonsearch = dishname + '_Nutrition'
+        response['nutrition'] = nutrition[jsonsearch]
+        response['ingredients'] = ''
+        return JsonResponse(response)
+
+        
+
 @csrf_exempt
 def helpform(request):
+    """
+    created for taking input from the user in case the prediction
+    of out model is wrong. takes a request containing the correct
+    dish name specified by user and the imagename in the static
+    files of this website.
+    """
     print('igotcalled')
     if request.method == 'POST':
         imname = request.POST['imagename']

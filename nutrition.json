@@ -1,0 +1,752 @@
+{
+    "appam_Ingredient": [
+        ""
+    ], 
+    "appam_Nutrition": {
+        "Carbohydrate": 0.5, 
+        "Cholesterol": 15.23, 
+        "Energy": 90.0, 
+        "Fat": 2.06, 
+        "Fibre": 1.147, 
+        "FoodName": "appam", 
+        "Protein": 2.3, 
+        "Serving Size": "114", 
+        "Sodium": 35.0, 
+        "ver": 1
+    }, 
+    "baingan_curry_Ingredient": [
+        ""
+    ], 
+    "baingan_curry_Nutrition": {
+        "Carbohydrate": 2.0, 
+        "Cholesterol": 8.2, 
+        "Energy": 142.0, 
+        "Fat": 12.0, 
+        "Fibre": 2.7, 
+        "FoodName": "baingan_curry", 
+        "Protein": 1.2, 
+        "Serving Size": "169", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "besan_ladoo_Ingredient": [
+        ""
+    ], 
+    "besan_ladoo_Nutrition": {
+        "Carbohydrate": 2.0, 
+        "Cholesterol": 24.0, 
+        "Energy": 211.0, 
+        "Fat": 11.0, 
+        "Fibre": 6.5, 
+        "FoodName": "besan_ladoo", 
+        "Protein": 4.2, 
+        "Serving Size": "12", 
+        "Sodium": 26.0, 
+        "ver": 1
+    }, 
+    "bhatura_Ingredient": [
+        ""
+    ], 
+    "bhatura_Nutrition": {
+        "Carbohydrate": 1.93, 
+        "Cholesterol": 44.39, 
+        "Energy": 418.44, 
+        "Fat": 23.5, 
+        "Fibre": 10.81, 
+        "FoodName": "bhatura", 
+        "Protein": 7.41, 
+        "Serving Size": "545.68", 
+        "Sodium": 5.65, 
+        "ver": 1
+    }, 
+    "bhindi_masala_Ingredient": [
+        ""
+    ], 
+    "bhindi_masala_Nutrition": {
+        "Carbohydrate": 5.0, 
+        "Cholesterol": 14.0, 
+        "Energy": 280.0, 
+        "Fat": 23.0, 
+        "Fibre": 3.0, 
+        "FoodName": "bhindi_masala", 
+        "Protein": 4.0, 
+        "Serving Size": "360", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "boondi_ladoo_Ingredient": [
+        ""
+    ], 
+    "boondi_ladoo_Nutrition": {
+        "Carbohydrate": 13.0, 
+        "Cholesterol": 21.0, 
+        "Energy": 185.0, 
+        "Fat": 14.0, 
+        "Fibre": 0.0, 
+        "FoodName": "boondi_ladoo", 
+        "Protein": 4.0, 
+        "Serving Size": "50", 
+        "Sodium": 5.0, 
+        "ver": 1
+    }, 
+    "butter_chicken_Ingredient": [
+        ""
+    ], 
+    "butter_chicken_Nutrition": {
+        "Carbohydrate": 2.0, 
+        "Cholesterol": 8.0, 
+        "Energy": 384.0, 
+        "Fat": 29.0, 
+        "Fibre": 10.0, 
+        "FoodName": "butter_chicken", 
+        "Protein": 24.0, 
+        "Serving Size": "860", 
+        "Sodium": 102.0, 
+        "ver": 1
+    }, 
+    "cauliflower_masala_Ingredient": [
+        ""
+    ], 
+    "cauliflower_masala_Nutrition": {
+        "Carbohydrate": 3.79, 
+        "Cholesterol": 10.15, 
+        "Energy": 127.34, 
+        "Fat": 8.09, 
+        "Fibre": 2.05, 
+        "FoodName": "cauliflower_masala", 
+        "Protein": 3.27, 
+        "Serving Size": "698.64", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "channa_masala_Ingredient": [
+        ""
+    ], 
+    "channa_masala_Nutrition": {
+        "Carbohydrate": 15.8, 
+        "Cholesterol": 59.9, 
+        "Energy": 423.0, 
+        "Fat": 14.2, 
+        "Fibre": 2.2, 
+        "FoodName": "channa_masala", 
+        "Protein": 18.7, 
+        "Serving Size": "99.1", 
+        "Sodium": 3.7, 
+        "ver": 1
+    }, 
+    "chapati_Ingredient": [
+        ""
+    ], 
+    "chapati_Nutrition": {
+        "Carbohydrate": 3.17, 
+        "Cholesterol": 21.48, 
+        "Energy": 143.38, 
+        "Fat": 5.01, 
+        "Fibre": 2.35, 
+        "FoodName": "chapati", 
+        "Protein": 3.08, 
+        "Serving Size": "117.14", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "chicken_biryani_Ingredient": [
+        ""
+    ], 
+    "chicken_biryani_Nutrition": {
+        "Carbohydrate": 2.0, 
+        "Cholesterol": 24.0, 
+        "Energy": 274.0, 
+        "Fat": 9.0, 
+        "Fibre": 1.0, 
+        "FoodName": "chicken_biryani", 
+        "Protein": 10.0, 
+        "Serving Size": "465", 
+        "Sodium": 13.0, 
+        "ver": 1
+    }, 
+    "coconut_ladoo_Ingredient": [
+        ""
+    ], 
+    "coconut_ladoo_Nutrition": {
+        "Carbohydrate": 4.0, 
+        "Cholesterol": 50.0, 
+        "Energy": 240.0, 
+        "Fat": 3.0, 
+        "Fibre": 0.0, 
+        "FoodName": "coconut_ladoo", 
+        "Protein": 6.0, 
+        "Serving Size": "300", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "curd_rice_Ingredient": [
+        ""
+    ], 
+    "curd_rice_Nutrition": {
+        "Carbohydrate": 0.7, 
+        "Cholesterol": 53.0, 
+        "Energy": 289.0, 
+        "Fat": 4.5, 
+        "Fibre": 2.7, 
+        "FoodName": "curd_rice", 
+        "Protein": 8.5, 
+        "Serving Size": "233", 
+        "Sodium": 16.0, 
+        "ver": 1
+    }, 
+    "dal_makhani_Ingredient": [
+        ""
+    ], 
+    "dal_makhani_Nutrition": {
+        "Carbohydrate": 14.48, 
+        "Cholesterol": 29.58, 
+        "Energy": 354.96, 
+        "Fat": 12.04, 
+        "Fibre": 7.0, 
+        "FoodName": "dal_makhani", 
+        "Protein": 31.82, 
+        "Serving Size": "685.44", 
+        "Sodium": 26.52, 
+        "ver": 1
+    }, 
+    "dum_aloo_Ingredient": [
+        ""
+    ], 
+    "dum_aloo_Nutrition": {
+        "Carbohydrate": 2.0, 
+        "Cholesterol": 11.0, 
+        "Energy": 240.0, 
+        "Fat": 20.0, 
+        "Fibre": 5.0, 
+        "FoodName": "dum_aloo", 
+        "Protein": 3.0, 
+        "Serving Size": "500", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "egg_bhurji_Ingredient": [
+        ""
+    ], 
+    "egg_bhurji_Nutrition": {
+        "Carbohydrate": 1.3, 
+        "Cholesterol": 6.0, 
+        "Energy": 160.3, 
+        "Fat": 12.2, 
+        "Fibre": 2.6, 
+        "FoodName": "egg_bhurji", 
+        "Protein": 7.5, 
+        "Serving Size": "272.5", 
+        "Sodium": 212.5, 
+        "ver": 1
+    }, 
+    "egg_curry_Ingredient": [
+        ""
+    ], 
+    "egg_curry_Nutrition": {
+        "Carbohydrate": 3.6, 
+        "Cholesterol": 14.0, 
+        "Energy": 211.0, 
+        "Fat": 13.0, 
+        "Fibre": 2.3, 
+        "FoodName": "egg_curry", 
+        "Protein": 10.0, 
+        "Serving Size": "74", 
+        "Sodium": 197.0, 
+        "ver": 1
+    }, 
+    "fish_curry_Ingredient": [
+        ""
+    ], 
+    "fish_curry_Nutrition": {
+        "Carbohydrate": 1.55, 
+        "Cholesterol": 0.78, 
+        "Energy": 214.65, 
+        "Fat": 17.33, 
+        "Fibre": 13.24, 
+        "FoodName": "fish_curry", 
+        "Protein": 14.48, 
+        "Serving Size": "227.58", 
+        "Sodium": 36.21, 
+        "ver": 1
+    }, 
+    "fish_head_curry_Ingredient": [
+        ""
+    ], 
+    "fish_head_curry_Nutrition": {
+        "Carbohydrate": 4.6, 
+        "Cholesterol": 16.07, 
+        "Energy": 244.0, 
+        "Fat": 13.51, 
+        "Fibre": 1.17, 
+        "FoodName": "fish_head_curry", 
+        "Protein": 16.67, 
+        "Serving Size": "390", 
+        "Sodium": 25.0, 
+        "ver": 1
+    }, 
+    "gulab_jamun_Ingredient": [
+        ""
+    ], 
+    "gulab_jamun_Nutrition": {
+        "Carbohydrate": 3.38, 
+        "Cholesterol": 98.33, 
+        "Energy": 774.0, 
+        "Fat": 28.58, 
+        "Fibre": 15.37, 
+        "FoodName": "gulab_jamun", 
+        "Protein": 31.05, 
+        "Serving Size": "207", 
+        "Sodium": 18.0, 
+        "ver": 1
+    }, 
+    "idli_Ingredient": [
+        ""
+    ], 
+    "idli_Nutrition": {
+        "Carbohydrate": 1.95, 
+        "Cholesterol": 15.45, 
+        "Energy": 79.23, 
+        "Fat": 0.45, 
+        "Fibre": 0.22, 
+        "FoodName": "idli", 
+        "Protein": 3.38, 
+        "Serving Size": "280.5", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "medu_vadai_Ingredient": [
+        ""
+    ], 
+    "medu_vadai_Nutrition": {
+        "Carbohydrate": 1.0, 
+        "Cholesterol": 14.0, 
+        "Energy": 170.0, 
+        "Fat": 10.0, 
+        "Fibre": 10.0, 
+        "FoodName": "medu_vadai", 
+        "Protein": 6.0, 
+        "Serving Size": "610", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "murtabak (veg)_Ingredient": [
+        ""
+    ], 
+    "murtabak (veg)_Nutrition": {
+        "Carbohydrate": 7.3, 
+        "Cholesterol": 61.75, 
+        "Energy": 620.84, 
+        "Fat": 33.53, 
+        "Fibre": 14.38, 
+        "FoodName": "murtabak (veg)", 
+        "Protein": 17.93, 
+        "Serving Size": "1205.16", 
+        "Sodium": 185.92, 
+        "ver": 1
+    }, 
+    "murukku_Ingredient": [
+        ""
+    ], 
+    "murukku_Nutrition": {
+        "Carbohydrate": 1.03, 
+        "Cholesterol": 10.16, 
+        "Energy": 110.0, 
+        "Fat": 6.62, 
+        "Fibre": 2.97, 
+        "FoodName": "murukku", 
+        "Protein": 2.4, 
+        "Serving Size": "178.42", 
+        "Sodium": 0.88, 
+        "ver": 1
+    }, 
+    "mushroom_masala_Ingredient": [
+        ""
+    ], 
+    "mushroom_masala_Nutrition": {
+        "Carbohydrate": 4.7, 
+        "Cholesterol": 17.0, 
+        "Energy": 156.0, 
+        "Fat": 9.4, 
+        "Fibre": 4.4, 
+        "FoodName": "mushroom_masala", 
+        "Protein": 5.0, 
+        "Serving Size": "53", 
+        "Sodium": 20.0, 
+        "ver": 1
+    }, 
+    "mutton_curry_Ingredient": [
+        ""
+    ], 
+    "mutton_curry_Nutrition": {
+        "Carbohydrate": 2.37, 
+        "Cholesterol": 9.26, 
+        "Energy": 266.08, 
+        "Fat": 11.04, 
+        "Fibre": 5.38, 
+        "FoodName": "mutton_curry", 
+        "Protein": 32.52, 
+        "Serving Size": "638.6", 
+        "Sodium": 147.82, 
+        "ver": 1
+    }, 
+    "mutton_soup_Ingredient": [
+        ""
+    ], 
+    "mutton_soup_Nutrition": {
+        "Carbohydrate": 0.0, 
+        "Cholesterol": 14.0, 
+        "Energy": 164.0, 
+        "Fat": 14.0, 
+        "Fibre": 0.0, 
+        "FoodName": "mutton_soup", 
+        "Protein": 27.0, 
+        "Serving Size": "1705", 
+        "Sodium": 150.0, 
+        "ver": 1
+    }, 
+    "naan_Ingredient": [
+        ""
+    ], 
+    "naan_Nutrition": {
+        "Carbohydrate": 1.81, 
+        "Cholesterol": 57.4, 
+        "Energy": 344.65, 
+        "Fat": 9.27, 
+        "Fibre": 4.18, 
+        "FoodName": "naan", 
+        "Protein": 8.02, 
+        "Serving Size": "554.83", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "north_indian_thali_Ingredient": [
+        ""
+    ], 
+    "north_indian_thali_Nutrition": {
+        "Carbohydrate": 0.0, 
+        "Cholesterol": 46.0, 
+        "Energy": 319.0, 
+        "Fat": 2.0, 
+        "Fibre": 1.0, 
+        "FoodName": "north_indian_thali", 
+        "Protein": 26.0, 
+        "Serving Size": "43", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "pakora (paneer)_Ingredient": [
+        ""
+    ], 
+    "pakora (paneer)_Nutrition": {
+        "Carbohydrate": 2.14, 
+        "Cholesterol": 7.69, 
+        "Energy": 182.7, 
+        "Fat": 13.42, 
+        "Fibre": 6.3, 
+        "FoodName": "pakora (paneer)", 
+        "Protein": 7.88, 
+        "Serving Size": "125.37", 
+        "Sodium": 15.75, 
+        "ver": 1
+    }, 
+    "palak_paneer_Ingredient": [
+        ""
+    ], 
+    "palak_paneer_Nutrition": {
+        "Carbohydrate": 2.0, 
+        "Cholesterol": 26.0, 
+        "Energy": 320.0, 
+        "Fat": 12.0, 
+        "Fibre": 2.0, 
+        "FoodName": "palak_paneer", 
+        "Protein": 28.0, 
+        "Serving Size": "491", 
+        "Sodium": 55.0, 
+        "ver": 1
+    }, 
+    "paneer_curry_Ingredient": [
+        ""
+    ], 
+    "paneer_curry_Nutrition": {
+        "Carbohydrate": 1.5, 
+        "Cholesterol": 10.0, 
+        "Energy": 367.0, 
+        "Fat": 29.0, 
+        "Fibre": 12.0, 
+        "FoodName": "paneer_curry", 
+        "Protein": 17.0, 
+        "Serving Size": "683", 
+        "Sodium": 62.0, 
+        "ver": 1
+    }, 
+    "paneer_tikka_Ingredient": [
+        ""
+    ], 
+    "paneer_tikka_Nutrition": {
+        "Carbohydrate": 3.1, 
+        "Cholesterol": 15.5, 
+        "Energy": 201.0, 
+        "Fat": 7.31, 
+        "Fibre": 4.202, 
+        "FoodName": "paneer_tikka", 
+        "Protein": 19.7, 
+        "Serving Size": "578", 
+        "Sodium": 21.0, 
+        "ver": 1
+    }, 
+    "pappadam_Ingredient": [
+        ""
+    ], 
+    "pappadam_Nutrition": {
+        "Carbohydrate": 0.44, 
+        "Cholesterol": 1.89, 
+        "Energy": 30.46, 
+        "Fat": 2.15, 
+        "Fibre": 0.95, 
+        "FoodName": "pappadam", 
+        "Protein": 0.89, 
+        "Serving Size": "125.1", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "plain_indian_rice_Ingredient": [
+        ""
+    ], 
+    "plain_indian_rice_Nutrition": {
+        "Carbohydrate": 3.8, 
+        "Cholesterol": 45.6, 
+        "Energy": 250.0, 
+        "Fat": 5.2, 
+        "Fibre": 0.8, 
+        "FoodName": "plain_indian_rice", 
+        "Protein": 5.2, 
+        "Serving Size": "301", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "poori_Ingredient": [
+        ""
+    ], 
+    "poori_Nutrition": {
+        "Carbohydrate": 5.4, 
+        "Cholesterol": 25.65, 
+        "Energy": 198.76, 
+        "Fat": 8.73, 
+        "Fibre": 4.77, 
+        "FoodName": "poori", 
+        "Protein": 4.23, 
+        "Serving Size": "618.3", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "prawn_curry_Ingredient": [
+        ""
+    ], 
+    "prawn_curry_Nutrition": {
+        "Carbohydrate": 5.91, 
+        "Cholesterol": 2.52, 
+        "Energy": 110.79, 
+        "Fat": 4.83, 
+        "Fibre": 11.85, 
+        "FoodName": "prawn_curry", 
+        "Protein": 139.3, 
+        "Serving Size": "37.29", 
+        "Sodium": 3.29, 
+        "ver": 1
+    }, 
+    "pulao_rice_Ingredient": [
+        ""
+    ], 
+    "pulao_rice_Nutrition": {
+        "Carbohydrate": 6.0, 
+        "Cholesterol": 35.8, 
+        "Energy": 202.9, 
+        "Fat": 4.7, 
+        "Fibre": 0.5, 
+        "FoodName": "pulao_rice", 
+        "Protein": 6.3, 
+        "Serving Size": "249", 
+        "Sodium": 1.1, 
+        "ver": 1
+    }, 
+    "raita_Ingredient": [
+        ""
+    ], 
+    "raita_Nutrition": {
+        "Carbohydrate": 0.2, 
+        "Cholesterol": 1.93, 
+        "Energy": 30.0, 
+        "Fat": 2.16, 
+        "Fibre": 0.433, 
+        "FoodName": "raita", 
+        "Protein": 0.99, 
+        "Serving Size": "112", 
+        "Sodium": 1.0, 
+        "ver": 1
+    }, 
+    "rajma_masala_Ingredient": [
+        ""
+    ], 
+    "rajma_masala_Nutrition": {
+        "Carbohydrate": 0.5, 
+        "Cholesterol": 17.0, 
+        "Energy": 120.0, 
+        "Fat": 3.5, 
+        "Fibre": 1.5, 
+        "FoodName": "rajma_masala", 
+        "Protein": 5.0, 
+        "Serving Size": "610", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "rasmalai_Ingredient": [
+        ""
+    ], 
+    "rasmalai_Nutrition": {
+        "Carbohydrate": 6.05, 
+        "Cholesterol": 64.51, 
+        "Energy": 451.08, 
+        "Fat": 15.37, 
+        "Fibre": 8.19, 
+        "FoodName": "rasmalai", 
+        "Protein": 13.61, 
+        "Serving Size": "131.04", 
+        "Sodium": 45.36, 
+        "ver": 1
+    }, 
+    "rava_upma_Ingredient": [
+        ""
+    ], 
+    "rava_upma_Nutrition": {
+        "Carbohydrate": 3.0, 
+        "Cholesterol": 26.6, 
+        "Energy": 222.0, 
+        "Fat": 6.5, 
+        "Fibre": 0.7, 
+        "FoodName": "rava_upma", 
+        "Protein": 5.1, 
+        "Serving Size": "22.5", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "roti_prata_Ingredient": [
+        ""
+    ], 
+    "roti_prata_Nutrition": {
+        "Carbohydrate": 1.32, 
+        "Cholesterol": 19.5, 
+        "Energy": 162.6, 
+        "Fat": 7.14, 
+        "Fibre": 3.38, 
+        "FoodName": "roti_prata", 
+        "Protein": 5.1, 
+        "Serving Size": "260.4", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "samosa_Ingredient": [
+        ""
+    ], 
+    "samosa_Nutrition": {
+        "Carbohydrate": 1.5, 
+        "Cholesterol": 11.0, 
+        "Energy": 85.0, 
+        "Fat": 3.0, 
+        "Fibre": 0.0, 
+        "FoodName": "samosa", 
+        "Protein": 3.0, 
+        "Serving Size": "175", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "south_indian_thali_Ingredient": [
+        ""
+    ], 
+    "south_indian_thali_Nutrition": {
+        "Carbohydrate": 3.0, 
+        "Cholesterol": 48.0, 
+        "Energy": 471.0, 
+        "Fat": 21.0, 
+        "Fibre": 6.0, 
+        "FoodName": "south_indian_thali", 
+        "Protein": 22.0, 
+        "Serving Size": "173", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "tandoori_chicken_Ingredient": [
+        ""
+    ], 
+    "tandoori_chicken_Nutrition": {
+        "Carbohydrate": 0.7, 
+        "Cholesterol": 6.1, 
+        "Energy": 263.0, 
+        "Fat": 12.0, 
+        "Fibre": 4.2, 
+        "FoodName": "tandoori_chicken", 
+        "Protein": 31.0, 
+        "Serving Size": "132", 
+        "Sodium": 135.0, 
+        "ver": 1
+    }, 
+    "tandoori_fish_Ingredient": [
+        ""
+    ], 
+    "tandoori_fish_Nutrition": {
+        "Carbohydrate": 1.0, 
+        "Cholesterol": 27.0, 
+        "Energy": 170.0, 
+        "Fat": 5.0, 
+        "Fibre": 3.0, 
+        "FoodName": "tandoori_fish", 
+        "Protein": 6.0, 
+        "Serving Size": "70", 
+        "Sodium": 10.0, 
+        "ver": 1
+    }, 
+    "teh_tarik_Ingredient": [
+        ""
+    ], 
+    "teh_tarik_Nutrition": {
+        "Carbohydrate": 0.73, 
+        "Cholesterol": 41.02, 
+        "Energy": 228.69, 
+        "Fat": 6.17, 
+        "Fibre": 3.09, 
+        "FoodName": "teh_tarik", 
+        "Protein": 2.54, 
+        "Serving Size": "36.66", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "thosai_Ingredient": [
+        ""
+    ], 
+    "thosai_Nutrition": {
+        "Carbohydrate": 0.0, 
+        "Cholesterol": 25.0, 
+        "Energy": 205.0, 
+        "Fat": 4.0, 
+        "Fibre": 0.0, 
+        "FoodName": "thosai", 
+        "Protein": 8.0, 
+        "Serving Size": "0", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }, 
+    "uttapam_Ingredient": [
+        ""
+    ], 
+    "uttapam_Nutrition": {
+        "Carbohydrate": 3.0, 
+        "Cholesterol": 24.0, 
+        "Energy": 170.0, 
+        "Fat": 7.0, 
+        "Fibre": 2.0, 
+        "FoodName": "uttapam", 
+        "Protein": 3.0, 
+        "Serving Size": "243", 
+        "Sodium": 0.0, 
+        "ver": 1
+    }
+}
