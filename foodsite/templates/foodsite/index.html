@@ -144,7 +144,7 @@
 				<div class = "container-fluid" style="margin-top: 30px">
 					<form id = "modalform">
 						{% csrf_token %}
-						<div class="col-sm-2" style="text-align: center; height: 50px; background: #0432B5;margin-left: 0.9%; width: 15.8%;">
+						<div class="col-sm-2" id = "choose" style="text-align: center; height: 50px; background: #0432B5;margin-left: 0.9%; width: 15.8%;">
 							<label id = "modallabel">CHOOSE IMAGE
 								<input type="file" name="modalfile" id = "modalfile" class = "modalfile" onchange="changer(this)">
 							</label>
@@ -298,17 +298,42 @@
 	</script>
 	<script type="text/javascript" src="{% static 'foodsite/js/indexparticles.js' %}"></script>
 	<!-- modal to be called when image is uploaded -->
-	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var btnwidth = $('#modalsubmit').width();
+			var docwidth = $(document).width();
+			if(docwidth< 700){
+				$('#choose').css('width', docwidth*0.76);
+				$('#modalfilename').css('width', docwidth*0.76);
+				$('#choose').css('font-size', '0.9em');
+				$('#modalfilename').css('padding-top', '5%');
+				$('#my_image').css('height', '100%');
+				$('#modalfilename').css('font-size', '0.9em');
+				$('#modalfilename').css('margin-left', docwidth*0.05);
+				$('#choose').css('margin-left', docwidth*0.05);
+				$('#modalfilename').css('text-align', 'center');
+			}
+		});
+	</script>
 	<script type="text/javascript">
 		// function to set the correct orientation for logo and label
-	
 		function setorientation(){
 			// getting screen height and width
 			var height = $(window).height();
 			var width = $(window).width();
+			var docwidth = $(document).width();
+			var mwidth = $('#myModal').width();
 			// getting logo height and width
 			var logowidth = $("#logo").width();
 			var logoheight = $("#logo").height();
+			var btnwidth = $('#modalsubmit').width();
+			if(docwidth< 700){
+				$('#choose').css('width', docwidth*0.76);
+				$('#modalfilename').css('width', docwidth*0.76);
+				$('#modalfilename').css('margin-left', docwidth*0.05);
+				$('#choose').css('margin-left', docwidth*0.05);
+				$('#modalfilename').css('text-align', 'center');
+			}
 			// setting logo margins
 			$("#logo").css('margin-top', parseInt(height)/2.8);
 			$("#logo").css('margin-left', (parseInt(width)-parseInt(logowidth))/2);
@@ -330,6 +355,7 @@
 			$('#my-dropzone').css('margin-top', parseInt(height/2.8 + height/15));
 		}
 		//var interval = self.setInterval(function(){loopforever()},3);
+		setorientation();
 		window.onload = setorientation;
 		window.onresize = setorientation;
 	
