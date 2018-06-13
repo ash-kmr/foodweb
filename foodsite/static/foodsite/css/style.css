@@ -34,10 +34,12 @@ ul{
 }
 .foodlist{
 	z-index: 10;
-	font-size: 1.7em;
 }
+
 #star{
 	padding-top: 6%;
+	padding-left: 0%;
+	padding-right: 0%;
 	z-index: 10;
 }
 .dropzone{

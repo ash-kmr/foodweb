@@ -10,7 +10,7 @@ from .forms import UploadFileForm
 import sys
 import json
 import csv
-sys.path.append('/home/ashish/Documents/github/foodweb/caffeclassifier/')
+sys.path.append('/home/admin/foodweb/foodweb/caffeclassifier/')
 from foodclassify import main
 # Create your views here.
 
@@ -66,6 +66,30 @@ def modalsubmit(request):
     else:
         return JsonResponse({'foo':'foo'})
 
+@csrf_exempt
+def appsubmit(request):
+    """
+    created for requests sent by Food Diary App. Takes a POST request
+    as input argument and returns a JSONResponse containing the predictions
+    """
+    print('appsubmit request')
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        new_file = UploadFile(file = request.FILES['image'])
+        new_file.save()
+        img = 'foodsite/static/foodsite/' + new_file.file.name;
+        l = ['foodclassify.py', img]
+        probs = main(input_file=l)
+        response = {'Result': 'Success'}
+        response["Predictions"] = []
+        for foodset in probs:
+            response["Predictions"].append({"FoodName": foodset[0], "ver": 1})
+        print(response)
+        return JsonResponse(response)
+    else:
+        return JsonResponse({'Result': 'Upload not valid.'})
+
+@csrf_exempt
 def getinfo(request):
     """
     created for requests sent by android application for getting
@@ -75,16 +99,20 @@ def getinfo(request):
     """
     print('getinfo request')
     if request.method == 'POST':
-        dishname = request.POST['dishname']
+        print(request.POST)
+        dishname = request.POST["dishname"]
+        print(dishname)
         response = {}
-        response['image_url'] = 'http://' + request.get_host() + '/static/foodsite/images' + dishname.replace('_', '');
+        response['image_url'] = 'http://' + request.get_host() + '/static/foodsite/images/' + dishname.replace('_', '')+'.jpg';
         response['version'] = 1;
         f = open('nutrition.json')
         nutrition = json.load(f)
         f.close()
         jsonsearch = dishname + '_Nutrition'
         response['nutrition'] = nutrition[jsonsearch]
-        response['ingredients'] = ''
+        print(nutrition[jsonsearch])
+        response['ingredients'] = ['']
+        response['Response'] = "Success"
         return JsonResponse(response)
 
         
