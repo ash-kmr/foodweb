@@ -3,7 +3,7 @@
 	height: 100vh;
 	z-index: 2;
 	background: black;
-	opacity: 0.7;
+	opacity: 0.55;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	position: fixed;
@@ -67,6 +67,7 @@ input[type='file']{
 /* modal css */
 .modal-dialog {
   width: 95%;
+  background-color: #faf5f5;
   left: 2.5%;
   z-index: 10;
   height: 95%;
@@ -79,6 +80,7 @@ input[type='file']{
   height: auto;
   min-height: 100%;
   z-index: 10;
+  background-color: #faf5f5;
   border-radius: 0;
 }
 #blackback{
@@ -111,6 +113,8 @@ input[type='file']{
 	font-family: serif;
 	transition: color 0.5s ease;
 }
+#myModal{
+}
 
 .labellogo{
 	width: 100%;
@@ -123,6 +127,16 @@ input[type='file']{
 	width: 100%;
 	z-index: 10;
 	position: relative;
+}
+.demo{
+	width: 100%;
+	z-index: 10;
+	position: relative;
+}
+#demo{
+	z-index: 10;
+	color: white;
+	font-size: 10vh;
 }
 #logo{
 	margin-top: 10%;

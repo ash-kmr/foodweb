@@ -107,14 +107,17 @@
 	<div id = "particles-js"></div>
 	<!--<div id = "blackback"></div>-->
 	<div class="labellogo" style="color: white">
-		<h1 id = "logo">PlateLog</h1>
+		<h1 id = "logo">FoodPal</h1>
 		<h1 id = "label">AI-based food recognition</h1>
 	</div>
 	<div class="container">
 		<div class="about" style="text-align: center">
 			<h1 id = "about">About us</h1>
-			<h1 id = "aboutus">PlateLog provides AI-enabled diet recognition, logging and management on the mobile platform</h1><br><br><br><br>
+			<h1 id = "aboutus">FoodPal provides AI-enabled diet recognition, logging and management on the mobile platform</h1><br><br><br><br>
 		</div>
+	</div>
+	<div class = "demo" style="text-align: center">
+		<h1 id = "demo">Demo</h1>
 	</div>
 	<div id="myModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
@@ -227,6 +230,7 @@
 	</script>
 	<form class="dropzone" id = "my-dropzone" action="{% url 'home' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
+            <div class="dz-message" style="font-size:1em" data-dz-message><span>Click or Drag to select Image</span></div>
     </form>
 	{% load static %}
 	<script src="{% static 'foodsite/js/dropzone.js' %}"></script>
@@ -348,11 +352,12 @@
 			var aboutheight = $('#about').height();
 			// setting margins of about
 			$('#about').css('margin-top', parseInt(height + height/7));
+			$('#demo').css('margin-top', parseInt(height/2.8 + height/15));	
 			// getting the width and height of dropzone
 			var aboutwidth = $('#my-dropzone').width();
 			var aboutheight = $('#my-dropzone').height();
 			// setting margins of dropzone
-			$('#my-dropzone').css('margin-top', parseInt(height/2.8 + height/15));
+			//$('#my-dropzone').css('margin-top', parseInt(height/2.8 + height/15));
 		}
 		//var interval = self.setInterval(function(){loopforever()},3);
 		setorientation();
@@ -374,6 +379,7 @@
 		    	$("#about").css("opacity", -1.5 + 4*$(window).scrollTop()/$(window).height());
 		    	$("#aboutus").css("opacity", -1.5 + 4*$(window).scrollTop()/$(window).height());
 		    	$('#my-dropzone').css("opacity", -4.5 + 4*$(window).scrollTop()/$(window).height());
+		    	$('#demo').css("opacity", -4.5 + 4*$(window).scrollTop()/$(window).height());
 		    	if(parseInt(window.getComputedStyle(document.getElementById("about")).getPropertyValue("opacity")) == 1){
 		    		$('#about').css("opacity", 4.50 - 4*$(window).scrollTop()/$(window).height());
 		    		$('#aboutus').css("opacity", 4.50 - 4*$(window).scrollTop()/$(window).height());
