@@ -10,7 +10,7 @@ from .forms import UploadFileForm
 import sys
 import json
 import csv
-sys.path.append('/home/admin/foodweb/foodweb/caffeclassifier/')
+sys.path.append('/home/ashish/Documents/github/foodweb/caffeclassifier/')
 from foodclassify import main
 # Create your views here.
 
