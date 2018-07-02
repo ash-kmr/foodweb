@@ -5,14 +5,42 @@ from django.shortcuts import render, HttpResponse
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.http import JsonResponse
 from django import forms
-from .models import UploadFile
+from .models import *
 from .forms import UploadFileForm
+from binascii import hexlify
+from django.contrib.auth.decorators import login_required
+import datetime
 import sys
+import os
 import json
 import csv
-sys.path.append('/home/ashish/Documents/github/foodweb/caffeclassifier/')
+sys.path.append('/home/admin/foodweb/foodweb/caffeclassifier/')
 from foodclassify import main
-# Create your views here.
+
+@login_required
+def profile(request):
+	user = request.user
+	api = Apimodel.objects.filter(user=user)
+	if(user.is_authenticated):
+		api = Apimodel.objects.filter(user=user)
+		if(len(api)==0):
+			count = 0
+			while True:
+				try:
+					key = hexlify(os.urandom(10)).decode()
+					api=Apimodel(user=user, status=True,apikey=key, resettime=datetime.datetime.now().time())
+					api.save()
+				except:
+					count += 1
+					if count > 5:
+						return HttpResponse('OOPS SOMETHING WENT WRONG')
+					continue
+				else:
+					break
+		api = Apimodel.objects.filter(user=user)[0]
+		print(api.apikey)
+		return render(request, 'userprofile/profile.html', {'api':api})
+	else: return HttpResponse('OOPS SOMETHING WENT WRONG')
 
 
 def home(request):

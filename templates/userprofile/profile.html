@@ -1,0 +1,37 @@
+{% extends 'userprofile/user_base.html' %}
+{% block body %}
+<div class = 'container'>
+	<div class="row">
+	<div class='col-sm-12'>
+		<div class="card">
+  			<div class="card-body">
+				Currently FoodAI API is available for two different food image recognition models:<br>
+				<b>Basic Model:</b> provide food image recogniation for over 100 types of food. The API results include the most confident classification results and the corresponding confidence scores.
+				<br><b>Advanced Model:</b> provide food image recogniation for over 700 types of food. The API results include the most confident classification results, confidence scores, as well as a new food hierarchy for extension to bigger classes of food.
+				Refer to our API Documentation for information on API Call parameters <br><br>
+				<div class='responsive-table'>
+					<table class="table">
+					  <thead class="thead-light">
+					    <tr>
+					      <th scope="col">User</th>
+					      <th scope="col">API Key</th>
+					      <th scope="col">Usage limit</th>
+					      <th scope="col">Current Usage</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">{{ user.username }}</th>
+					      <td>{{api.apikey}}</td>
+					      <td>{{api.limit}}</td>
+					      <td>{{api.usage}}</td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+  			</div>
+		</div>
+	</div>
+	</div>
+</div>
+{% endblock %}

@@ -27,13 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
 # Application definition
 
 INSTALLED_APPS = [
     'foodsite',
-    'account',
     'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'allauth',
+    'allauth.account',
+    'widget_tweaks',
     #'social-django',
 ]
 
@@ -74,6 +79,12 @@ TEMPLATES = [
         },
     },
 ]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]
+
 
 WSGI_APPLICATION = 'foodweb.wsgi.application'
 
@@ -137,3 +148,9 @@ EMAIL_HOST_USER = 'kumarashish1550@gmail.com'
 EMAIL_HOST_PASSWORD = 'M1g7gcbF'
 EMAIL_PORT = 587
 
+#------ALL AUTH CONFIGURATIONS---------------
+ACCOUNT_EMAIL_REQUIRED=True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_CONFIRM_EMAIL_ON_GET=True
+ACCOUNT_LOGOUT_ON_GET=True
+LOGIN_REDIRECT_URL = '/userprofile/'
